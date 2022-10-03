@@ -1,12 +1,10 @@
 ﻿Console.Clear();
-
-int[] array = new int[8];
-
-int i = 0;
-
-for (i = 0; i < n; i++)
+Console.Write("Введите число: ");
+int x = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+while (x > 0)
     {
-    array[i] = Convert.ToInt32(Console.ReadLine());
-    
+        sum = sum + x % 10;
+        x = x / 10;
     }
-Console.WriteLine("[ " + string.Join(" | ", array) + " ]");
+Console.WriteLine($"Сумма цифр равна {sum}");
