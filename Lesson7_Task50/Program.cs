@@ -6,7 +6,7 @@ void InputMatrix(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = Convert.ToInt32(new Random().Next(-100,101));
+            matrix[i, j] = Convert.ToInt32(new Random().Next(-100, 101));
             Console.Write(matrix[i, j] + " \t");
         }
         Console.WriteLine();
@@ -19,15 +19,19 @@ int n = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = new int[m, n];
 InputMatrix(matrix);
 Console.WriteLine();
-Console.Write("Введите строку A искомого элемента: ");
+Console.Write("Введите строку «A» искомого элемента: ");
 int A = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите столбец B искомого элемента: ");
-int B = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
-if (A > m || B > n )
+if (A > m)
 {
-  Console.WriteLine("Такого элемента нет - Вы вышли за размеры массива.");
-  return;  
+    Console.WriteLine("Такой строки нет - Вы вышли за размеры массива.");
+    return;
 }
-else
-Console.WriteLine($"Указанной позиции соответстсвует элемент массива {matrix[A-1,B-1]}.");
+Console.Write("Введите столбец «B» искомого элемента: ");
+int B = Convert.ToInt32(Console.ReadLine());
+if (B > n)
+{
+    Console.WriteLine("Такого столбца нет - Вы вышли за размеры массива.");
+    return;
+}
+Console.WriteLine();
+Console.WriteLine($"Указанной позиции соответстсвует элемент массива {matrix[A - 1, B - 1]}.");
