@@ -19,14 +19,14 @@ int n = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = new int[m, n];
 InputMatrix(matrix);
 Console.WriteLine();
-Console.Write("Введите строку «A» искомого элемента: ");
+Console.Write("Введите строку искомого элемента: ");
 int A = Convert.ToInt32(Console.ReadLine());
 if (A > m)
 {
     Console.WriteLine("Такой строки нет - Вы вышли за размеры массива.");
     return;
 }
-Console.Write("Введите столбец «B» искомого элемента: ");
+Console.Write("Введите столбец искомого элемента: ");
 int B = Convert.ToInt32(Console.ReadLine());
 if (B > n)
 {
