@@ -4,7 +4,7 @@ void InputMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-                for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
             matrix[i, j] = Convert.ToInt32(new Random().Next(-100, 101));
             Console.Write(matrix[i, j] + " \t");
@@ -19,14 +19,12 @@ int j = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = new int[i, j];
 InputMatrix(matrix);
 Console.WriteLine();
-for (int x = 0; x < j; x++)
+for (int y = 0; y < j; y++)
+{
+    double sum = 0;
+    for (int x = 0; x < i; x++)
     {
-        double sum = 0;
-        for (int y = 0; y < j; y++)
-        {
-            sum = sum + matrix[x, y];
-            Console.WriteLine(sum+"\t");
-        }
-
-        Console.Write(sum / i + ";"+"\t");
+        sum = sum + matrix[x, y];
     }
+    Console.Write(Math.Round(sum / i, 1) + ";" + "\t");
+}
