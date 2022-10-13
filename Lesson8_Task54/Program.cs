@@ -1,5 +1,4 @@
 ﻿Console.Clear();
-
 void InputMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -12,8 +11,6 @@ void InputMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
-
-
 void OutputMatrix(int[,] matrix)
 {
     for (int m = 0; m < matrix.GetLength(0); m++)
@@ -28,10 +25,8 @@ void OutputMatrix(int[,] matrix)
                     matrix[m, n] = matrix[m, k];
                     matrix[m, k] = temp;
                 }
-
             }
             Console.Write(matrix[m, n] + " \t");
-
         }
         Console.WriteLine();
     }
